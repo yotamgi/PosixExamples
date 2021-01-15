@@ -20,6 +20,7 @@ void father(int shfd) {
 	while (1) {
 		for (int i=0; i<100; i++) {
 			*(int *)shbuf = i;
+			usleep(1000);
 		}
 	}
 }
