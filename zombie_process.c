@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main() {
 	int pid;
@@ -13,5 +15,6 @@ int main() {
 		// father
 		usleep(20 * 1000000);
 		printf("Father is dying...\n");
+		waitpid(pid, NULL, 0);
 	}
 }
